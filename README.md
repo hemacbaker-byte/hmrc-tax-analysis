@@ -48,6 +48,10 @@ The raw HMRC file needed tidying before analysis:
 - 📈 Receipts grew from £593bn (2017/18) to £938bn (2025/26)
 - 🦠 The Covid year (2020/21) saw a 7.8% fall, followed by a 22.5% rebound
 - 🔗 Income Tax and National Insurance move closely together (0.82)
+## 📊 Charts
+![Total HMRC receipts over time](outputs/total_receipts_trend.png)
+![Tax mix share](outputs/tax_mix_share.png)
+![Receipts by financial year](outputs/receipts_by_financial_year.png)
 
 📓 Details: [02_eda.ipynb](notebooks/02_eda.ipynb)
 
