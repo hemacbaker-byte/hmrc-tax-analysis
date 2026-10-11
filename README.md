@@ -41,6 +41,16 @@ The raw HMRC file needed tidying before analysis:
 
 **Result:** 113 months × 45 columns, April 2017 to August 2026, saved as `data/processed/hmrc_clean.csv`.
 
+## 🔍 Key findings from the exploration
+- 💷 Income Tax is the biggest single tax, at about £20bn a month
+- 📅 January is the busiest month, about 54% above a typical month
+- 🗓️ VAT and Corporation Tax arrive in quarterly waves
+- 📈 Receipts grew from £593bn (2017/18) to £938bn (2025/26)
+- 🦠 The Covid year (2020/21) saw a 7.8% fall, followed by a 22.5% rebound
+- 🔗 Income Tax and National Insurance move closely together (0.82)
+
+📓 Details: [02_eda.ipynb](notebooks/02_eda.ipynb)
+
 📓 Full details: [01_etl.ipynb](notebooks/01_etl.ipynb)
 ## 🔬 Hypotheses
 *To be added after exploring the data.*
