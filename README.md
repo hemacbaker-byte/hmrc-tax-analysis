@@ -31,7 +31,17 @@ hmrc-tax-analysis/
 ├── docs/             notes and documentation
 └── outputs/          charts and results
 ```
+## 🧹 Data preparation (ETL)
+The raw HMRC file needed tidying before analysis:
+- 🔚 Removed a footer row that wasn't real data
+- 🔢 Converted numbers stored as text into real numbers
+- ❌ Turned `[X]` (not available) into proper empty values
+- 📅 Converted months into real dates
+- 🗑️ Dropped two columns that were empty in every month
 
+**Result:** 113 months × 45 columns, April 2017 to August 2026, saved as `data/processed/hmrc_clean.csv`.
+
+📓 Full details: [01_etl.ipynb](notebooks/01_etl.ipynb)
 ## 🔬 Hypotheses
 *To be added after exploring the data.*
 
