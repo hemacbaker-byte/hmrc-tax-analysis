@@ -1,5 +1,5 @@
 # 💷 HMRC Tax Receipts Analysis
-![HMRC POJECT BANNER](C:\Users\Hevack\Documents\hmrc-tax-analysis\docs\HMRC PROJECT BANNER.jpg)
+![HMRC POJECT BANNER]
 
 Analysing UK tax and National Insurance receipts to spot patterns, test ideas and predict future receipts.
 
