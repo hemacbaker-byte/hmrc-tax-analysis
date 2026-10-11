@@ -78,3 +78,7 @@ The raw HMRC file needed tidying before analysis:
 ## 🧱 Project management
 Work is planned on a GitHub Kanban board, using MoSCoW priorities.# hmrc-tax-analysis
 Analyzing UK HMRC Tax &amp; NICs receipts with ML modeling and Power BI.
+
+## 🙏 Credits
+- Data: HMRC tax and NICs receipts, published on GOV.UK
+- An AI assistant (Claude) was used for guidance and to help explain with errors in code and also with Readme, user stories for my project board, applying static image for plotly chart for repo, editing the banner for the project.
