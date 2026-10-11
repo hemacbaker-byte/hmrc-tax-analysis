@@ -57,8 +57,20 @@ The raw HMRC file needed tidying before analysis:
 📓 Details: [02_eda.ipynb](notebooks/02_eda.ipynb)
 
 📓 Full details: [01_etl.ipynb](notebooks/01_etl.ipynb)
-## 🔬 Hypotheses
-*To be added after exploring the data.*
+
+## 🔬 Hypotheses tested
+
+### 📅 The January effect
+- **H0:** January receipts are the same as other months
+- **H1:** January receipts are higher
+- **Result:** ✅ supported (p ≈ 0.0001)
+
+### 🔗 Income Tax and National Insurance
+- **H0:** there is no positive correlation
+- **H1:** the two are positively correlated
+- **Result:** ✅ supported (r = 0.82, or 0.38 once the trend is removed)
+
+📓 Details: [03_statistics.ipynb](notebooks/03_statistics.ipynb)
 
 ## 📈 Results and conclusions
 *To be added when the analysis is complete.*
