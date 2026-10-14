@@ -153,10 +153,10 @@ Each chart answers one business question. They are created in [02_eda.ipynb](not
 
 ![Total HMRC receipts over time](outputs/total_receipts_trend.png)
 
-- **What it shows:** monthly total receipts, with a 12-month average on top to smooth out the seasonal swings
-- **What we learn:** the 12-month average rose steadily to about £52.9bn by the end of 2019, fell to its lowest point of about £46.9bn in October 2020 (the Covid period), then recovered from 2021 and has kept climbing, reaching its highest level of about £80.2bn in August 2026
-- **Look for the spikes:** the same sharp peak appears every January. The lowest single month was May 2020 (about £26.0bn) and the highest was January 2026 (about £126.4bn)
-- **Note:** the figures are not adjusted for inflation, so part of the rise is higher prices
+- **What it shows:** monthly total receipts, with a 12-month average on top to smooth out the seasonal swings.
+- **What we learn:** the 12-month average rose steadily to about £52.9bn by the end of 2019, fell to its lowest.point of about £46.9bn in October 2020 (the Covid period), then recovered from 2021 and has kept climbing, reaching its highest level of about £80.2bn in August 2026.
+- **Look for the spikes:** the same sharp peak appears every January. The lowest single month was May 2020 (about £26.0bn) and the highest was January 2026 (about £126.4bn).
+- **Note:** the figures are not adjusted for inflation, so part of the rise is higher prices.
 
 #### 💷 Chart 2: Which taxes bring in the most?
 **Business question:** Which taxes bring in the most money?
@@ -165,7 +165,7 @@ Each chart answers one business question. They are created in [02_eda.ipynb](not
 
 - **What it shows:** the eight taxes with the highest average monthly receipts
 - **What we learn:** Income Tax is clearly the biggest at about £20.1bn a month, followed by National Insurance (£13.5bn), VAT (£12.4bn) and Corporation Tax (£5.9bn). Together these four bring in about 85% of everything collected. Fuel duties come fifth at about £2.1bn
-- **Note:** each average only counts the months a tax existed, which is why the newer Energy Profits Levy appears in the list
+- **Note:** each average only counts the months a tax existed, which is why the newer Energy Profits Levy appears in the list.
 
 #### 📦 Chart 3: Is there a seasonal pattern?
 **Business question:** Do receipts follow a seasonal pattern?
@@ -201,7 +201,7 @@ Each chart answers one business question. They are created in [02_eda.ipynb](not
 
 - **What it shows:** total receipts for each complete UK financial year (April to March), coloured by growth compared with the year before
 - **What we learn:** receipts grew from about £593bn in 2017/18 to about £938bn in 2025/26. 2020/21 is the only year they fell (down 7.8%), followed by a rebound of 22.5% in 2021/22. Since then they have grown every year, by between 3.6% and 10.0%
-- **Note:** 2026/27 is left out because only five months are available so far, and a short bar would look like a fall
+- **Note:** 2026/27 is left out because only five months are available so far, and a short bar would look like a fall.
 
 #### 🗓️ Chart 7: When does each tax arrive?
 **Business question:** When does each tax arrive, and what causes the January spike?
@@ -233,7 +233,7 @@ The notebook explains _mean, median, standard deviation, probability, hypothesis
 - **Alternative hypothesis (H1):** they are positively correlated
 - **Test:** Pearson correlation, significance level 0.05
 - **Result:** r = 0.82 across 113 months (p far below 0.001). ✅ **H0 rejected**
-- **Check without the trend:** comparing yearly growth rates gives r = 0.38 (p below 0.001), so the link is real but moderate once the shared upward trend is removed
+- **Check without the trend:** comparing yearly growth rates gives r = 0.38 (p below 0.001), so the link is real but moderate once the shared upward trend is removed.
 
 ---
 
@@ -289,7 +289,7 @@ The dashboard has two pages. Python prepares the data for it (notebook 04, Part 
 
 - A **Financial year** filter changes the cards and charts together
 - Two cards: total receipts and average receipts per month
-- Charts: the top 10 taxes, receipts over time, average receipts by calendar month, and total receipts by financial year
+- Charts: the top 10 taxes, receipts over time, average receipts by calendar month, and total receipts by financial year.
 
 ### Page 2: Machine Learning Revenue Model
 ![Dashboard page 2](docs/dashboard_page2.png)
@@ -340,10 +340,10 @@ Total receipts grew from about £593bn in 2017/18 to about £938bn in 2025/26. 2
 ## ✅ Conclusions and recommendations
 
 **Conclusions**
-- Four taxes (Income Tax, National Insurance, VAT and Corporation Tax) bring in about 85% of what HMRC collects, and Income Tax is the biggest by a clear margin
-- Receipts follow a strong, statistically proven yearly pattern, led by a very large January, and quarterly waves for VAT and Corporation Tax
-- Receipts have grown strongly since 2017, apart from the Covid dip. These figures are not adjusted for inflation, so part of the rise is higher prices
-- A simple model using a trend and the month of the year predicts monthly receipts to within about 6% on average and beats the obvious guess, but it is weakest in January
+- Four taxes (Income Tax, National Insurance, VAT and Corporation Tax) bring in about 85% of what HMRC collects, and Income Tax is the biggest by a clear margin.
+- Receipts follow a strong, statistically proven yearly pattern, led by a very large January, and quarterly waves for VAT and Corporation Tax.
+- Receipts have grown strongly since 2017, apart from the Covid dip. These figures are not adjusted for inflation, so part of the rise is higher prices.
+- A simple model using a trend and the month of the year predicts monthly receipts to within about 6% on average and beats the obvious guess, but it is weakest in January.
 
 **Recommendations**
 1. 📅 **Plan around the peaks.** Expect a very large inflow every January, VAT peaks in January, April, July and October, and Corporation Tax peaks in March, June, September and December
@@ -407,4 +407,4 @@ My first project's assessment gave me three clear targets, and I used this proje
 - **Data:** HMRC tax and NICs receipts, published on GOV.UK (link above) open source.
 - **AI assistance:** I used an AI assistant (Claude, by Anthropic) throughout this project. It guided me step by step and helped me explain and debug the Python code, draft the user stories for the project board, set up the Power BI dashboard with buttons etc, and edit this README. I wrote and ran every step on the data myself and checked the results against each other. 
 - **Special thanks**
-Thanks code institute and team of staff and students who supported me for this project.
+Code institute and team of staff and students who supported me for this project.
