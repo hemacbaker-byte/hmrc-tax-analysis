@@ -287,27 +287,35 @@ Shows the model's predictions against what really happened over the last 12 mont
 ### 💬 Questions and answers the dashboard answers
 
 **Q1: Which taxes bring in the most money?**
+
 Income Tax is the biggest, at about 33% of all receipts. Income Tax, National Insurance, VAT and Corporation Tax together make up about 85%. Fuel duties come fifth.
 
 **Q2: How have receipts changed over time?**
+
 Receipts rise steadily from 2017, drop sharply in 2020 (the Covid period, lowest month about £26.0bn), then climb again and peak in January 2026 at about £126.4bn.
 
 **Q3: Is there a seasonal pattern?**
+
 Yes. January is by far the highest month, averaging about £95.5bn. July is second (about £74.5bn) and April third (about £65.1bn). May is the lowest at about £50.5bn.
 
 **Q4: How much is collected overall?**
+
 About £6.95 trillion between April 2017 and August 2026, an average of about £61.5bn a month.
 
 **Q5: Can we predict future receipts?**
+
 Reasonably well. Over the last 12 months the model predicted about £912bn against an actual £963bn, about 5% too low, and it follows the yearly pattern closely.
 
 **Q6: Where does the model struggle?**
+
 January 2026: it predicted about £107.5bn, but the actual figure was about £126.4bn. It tends to under-predict because receipts grew faster recently than the trend it learned.
 
 **Q7: How reliable is it?**
+
 On average it misses by about £5.4bn a month (6.2%), which beats the simple guess of "same month last year" (8.1%).
 
 **Q8: How fast are receipts growing each year?**
+
 Total receipts grew from about £593bn in 2017/18 to about £938bn in 2025/26. 2020/21 is the only year they fell (down 7.8%), followed by a strong rebound of 22.5% in 2021/22. Since then they have grown every year, between 3.6% and 10.0%.
 
 ### 🧩 Data model
