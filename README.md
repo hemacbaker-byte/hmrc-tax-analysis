@@ -144,11 +144,74 @@ The raw file needed tidying before analysis:
 - 🔗 **Income Tax and National Insurance move closely together** (correlation 0.82)
 - 🥧 **Income Tax is carrying more of the load**: its share of receipts rose from about 30% to about 35%
 
-### 📊 Charts
+### 📊 The seven charts and what each one tells us
+
+Each chart answers one business question. They are created in [02_eda.ipynb](notebooks/02_eda.ipynb) and saved in the `outputs` folder.
+
+#### 📈 Chart 1: Total receipts over time
+**Business question:** How have receipts changed since 2017?
 
 ![Total HMRC receipts over time](outputs/total_receipts_trend.png)
+
+- **What it shows:** monthly total receipts, with a 12-month average on top to smooth out the seasonal swings
+- **What we learn:** the 12-month average rose steadily to about £52.9bn by the end of 2019, fell to its lowest point of about £46.9bn in October 2020 (the Covid period), then recovered from 2021 and has kept climbing, reaching its highest level of about £80.2bn in August 2026
+- **Look for the spikes:** the same sharp peak appears every January. The lowest single month was May 2020 (about £26.0bn) and the highest was January 2026 (about £126.4bn)
+- **Note:** the figures are not adjusted for inflation, so part of the rise is higher prices
+
+#### 💷 Chart 2: Which taxes bring in the most?
+**Business question:** Which taxes bring in the most money?
+
+![Average monthly receipts by tax](outputs/top_taxes_bar.png)
+
+- **What it shows:** the eight taxes with the highest average monthly receipts
+- **What we learn:** Income Tax is clearly the biggest at about £20.1bn a month, followed by National Insurance (£13.5bn), VAT (£12.4bn) and Corporation Tax (£5.9bn). Together these four bring in about 85% of everything collected. Fuel duties come fifth at about £2.1bn
+- **Note:** each average only counts the months a tax existed, which is why the newer Energy Profits Levy appears in the list
+
+#### 📦 Chart 3: Is there a seasonal pattern?
+**Business question:** Do receipts follow a seasonal pattern?
+
+![Seasonal pattern in HMRC receipts](outputs/seasonal_boxplot.png)
+
+- **What it shows:** how each calendar month compares with its typical level. A score of 1.0 is a normal month, 1.2 is 20% above normal. Each box covers the middle half of the years, the line inside is the median, and dots are unusual years
+- **What we learn:** January is far above normal (a typical January scores about 1.54, which is 54% higher), followed by July (about 1.18) and April (about 1.09). May is the weakest month, at about 0.85
+- **Why it matters:** the pattern repeats year after year, and the statistics notebook confirms the January effect is significant (Hypothesis 1)
+
+#### 🔥 Chart 4: Which taxes move together?
+**Business question:** Do some taxes move together?
+
+![Correlation between the main taxes](outputs/tax_correlation_heatmap.png)
+
+- **What it shows:** how closely pairs of taxes rise and fall together, from -1 to +1. Red means they move together and blue means they move apart
+- **What we learn:** the strongest link is between Income Tax and National Insurance (0.82), which makes sense because both are collected through payroll. Income Tax and Capital Gains Tax (0.70) and National Insurance and Inheritance Tax (0.70) also move together. Fuel duties have weak or slightly negative links with most taxes, so they behave differently
+- **Note:** correlation shows that taxes move together, not that one causes the other, and a shared upward trend inflates the scores. The statistics notebook tests the Income Tax and National Insurance link properly (Hypothesis 2)
+
+#### 🥧 Chart 5: How has the mix of taxes changed?
+**Business question:** Has the balance between taxes shifted over time?
+
 ![Share of receipts by tax](outputs/tax_mix_share.png)
-![Receipts by financial year](outputs/receipts_by_financial_year.png)
+
+- **What it shows:** each tax's share of total receipts, using 12-month averages, so the long-term picture is not hidden by seasonal spikes
+- **What we learn:** between March 2018 and August 2026, Income Tax grew from about 30% to about 35% of receipts. National Insurance stayed steady at about 22%, VAT slipped from about 21% to 19%, Corporation Tax rose from about 9% to 10%, and all the smaller taxes combined fell from about 17% to 14%
+- **Why it matters:** Income Tax is carrying a growing share of the load
+
+#### 📅 Chart 6: Receipts by financial year
+**Business question:** How fast are receipts growing each year?
+
+![Total receipts by financial year](outputs/receipts_by_financial_year.png)
+
+- **What it shows:** total receipts for each complete UK financial year (April to March), coloured by growth compared with the year before
+- **What we learn:** receipts grew from about £593bn in 2017/18 to about £938bn in 2025/26. 2020/21 is the only year they fell (down 7.8%), followed by a rebound of 22.5% in 2021/22. Since then they have grown every year, by between 3.6% and 10.0%
+- **Note:** 2026/27 is left out because only five months are available so far, and a short bar would look like a fall
+
+#### 🗓️ Chart 7: When does each tax arrive?
+**Business question:** When does each tax arrive, and what causes the January spike?
+
+![When each tax arrives](outputs/tax_timing_heatmap.png)
+
+- **What it shows:** for six taxes, how each calendar month compares with that tax's own typical month (1.0 is normal, 2.0 is double). Red is above normal and blue is below
+- **What we learn:** every tax has its own rhythm. VAT peaks every quarter (January, April, July and October). Corporation Tax peaks in March, June, September and December. Income Tax peaks in January (about 1.8 times a normal month) and again in July (about 1.4 times). Capital Gains Tax is almost all collected in January, at about 8.7 times a normal month. National Insurance has gentle peaks, and fuel duties are flat all year
+- **Why it matters:** January stands out in Chart 3 because Income Tax, Capital Gains Tax and VAT all peak in the same month
+- **Note:** the colour scale stops at 2.0, so the Capital Gains Tax box looks the same shade as other high months, but the number printed in it shows the true size
 
 ---
 
@@ -205,10 +268,7 @@ The notebook explains mean, median, standard deviation, probability, hypothesis 
 
 ## 🎛️ Interactive dashboard
 
-📁 ## 📊 Interactive Power BI Dashboard
-
-> 📁 **Power BI Report File**: 
-> Click here to [Download `hmrc_dashboard.pbix`](https://github.com/hemacbaker-byte/hmrc-tax-analysis/raw/main/dashboards/hmrc_dashboard.pbix) to view in Power BI Desktop.
+📁 [`dashboards/hmrc_dashboard.pbix`](dashboards/hmrc_dashboard.pbix) (open with Power BI Desktop)
 
 The dashboard has two pages. Python prepares the data for it (notebook 04, Part 5), and Power BI turns it into an interactive report.
 
