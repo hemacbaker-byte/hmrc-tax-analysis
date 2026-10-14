@@ -282,7 +282,7 @@ The notebook explains _mean, median, standard deviation, probability, hypothesis
 
 📁 This link [`dashboards/hmrc_dashboard.pbix`](dashboards/hmrc_dashboard.pbix) can be opened with Power BI Desktop.
 
-The dashboard has two pages. Python prepares the data for it (notebook 04, Part 5), and Power BI turns it into an interactive report.
+The dashboard has two pages. Python prepares the data for it (notebook 04, Part 7), and Power BI turns it into an interactive report.
 
 ### Page 1: UK Tax Receipts Dashboard
 ![Dashboard page 1](docs/dashboard_page1.png)
