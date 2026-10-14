@@ -245,25 +245,37 @@ The notebook explains _mean, median, standard deviation, probability, hypothesis
 
 **Model:** linear regression, using two clues: a time counter (the upward trend) and the month of the year (January is high, May is low).
 
-**Why this model:** it matches what the exploration and statistics found (a steady trend plus a proven seasonal pattern), it works well on a small dataset of 113 months, it can be explained to a finance team, and it can keep following a rising trend.
+## 🤖 Machine Learning Model & Forecasting
 
-**Alternatives considered:**
-- **Random forest**: handles uneven patterns but cannot predict above the highest value it has seen, and could memorise a small dataset.
-- **_Time-series_** models such as **SARIMA**: designed for this kind of data, but harder to explain and beyond the chosen toolset.
-- **Neural networks**: need far more data than 113 months
+**Problem:** Predict total monthly HMRC tax receipts.
 
-**Testing:** trained on April 2017 to August 2025 (101 months), then tested on the last 12 months (September 2025 to August 2026), which the model had never seen. The split is by time, not random, so the model never peeks at the future.
+**Primary Model:** **Linear regression**, using two key features: a time counter (to capture the long-term upward trend) and month-of-year indicators (capturing seasonality, where January peaks and May dips).
 
-**Results:**
-- Average miss of about **£5.4bn a month (6.2%)**, and it captures about 80% of the ups and downs in monthly receipts (R-squared 0.80)
-- It beats the simple baseline "same month last year" (about £6.6bn, 8.1%), and was closer in 8 of the 12 months
-- Over the 12 months it predicted about £912bn against an actual £963bn (about 5% too low)
+**Why Linear Regression Won:** 
+* Matches our EDA and statistical findings (steady upward trend + seasonal pattern).
+* Works reliably on a smaller dataset of 113 months without overfitting.
+* Easily interpretable for finance teams and stakeholders.
+* **Extrapolation:** Successfully projects future values upward as tax receipts continue to grow.
 
-**Weaknesses:**
-- It under-predicted in 9 of the 12 months, because receipts grew faster recently than the trend it learned
-- It struggles most with January: in January 2026 it predicted about £107.5bn against an actual £126.4bn (about 15% too low)
-- The Covid dip sits inside the training data and does not fit a straight trend neatly.
+**Alternative Model Tested:**
+* **Random Forest Regressor:** Tested as a secondary model. While great for non-linear patterns, tree-based models cannot extrapolate above the highest historical training value. Because UK tax receipts continuously set new highs, Random Forest flattened out, yielding a negative $R^2$ (-0.13) and a high average miss (~£9.7bn).
 
+**Testing Strategy:** 
+* Trained on data from April 2017 to August 2025 (101 months).
+* Tested on the hidden final 12 months (September 2025 to August 2026) split strictly by time to prevent data leakage.
+
+### 📊 Model Performance Comparison (12 Test Months)
+
+| Evaluation Metric | Linear Regression | Random Forest | Winning Model |
+| :--- | :--- | :--- | :--- |
+| **Average Miss (£m)** | £5,400m (£5.4bn) | £9,720m (£9.7bn) | 🟦 **Linear Regression** |
+| **Average Miss (%)** | 6.2% | 10.02% | 🟦 **Linear Regression** |
+| **R-squared ($R^2$)** | 0.80 | -0.13 | 🟦 **Linear Regression** |
+
+**Key Results & Weaknesses (Linear Regression):**
+* Captures ~80% of the variance ($R^2 = 0.80$) and beats the simple "same month last year" baseline (£5.4bn vs £6.6bn error).
+* Under-predicted in 9 out of 12 test months because recent receipts grew faster than the historical trend line.
+* Struggled most with January 2026, predicting £107.5bn against an actual £126.4bn (~15% too low).
 ---
 
 ## 🎛️ Interactive dashboard
@@ -322,7 +334,6 @@ Total receipts grew from about £593bn in 2017/18 to about £938bn in 2025/26. 2
 - `hmrc_long`: one row per month per tax, with a **Row type** column (Tax, Component or Total). Totals and components are labelled because they already include other taxes, so the dashboard only adds up rows where Row type is Tax, or uses Total HMRC Receipts on its own, to avoid counting money twice.
 - `model_predictions`: 12 rows (actual and predicted receipts for the test months)
 - The two tables are deliberately not linked, because the predictions cover a different, shorter period.
-
 
 ---
 
