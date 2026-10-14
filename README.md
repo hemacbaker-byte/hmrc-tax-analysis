@@ -248,9 +248,9 @@ On average it misses by about £5.4bn a month (6.2%), which beats the simple gue
 Total receipts grew from about £593bn in 2017/18 to about £938bn in 2025/26. 2020/21 is the only year they fell (down 7.8%), followed by a strong rebound of 22.5% in 2021/22. Since then they have grown every year, between 3.6% and 10.0%.
 
 ### 🧩 Data model
-- `hmrc_long`: one row per month per tax, with a **Row type** column (Tax, Component or Total). Totals and components are labelled because they already include other taxes, so the dashboard only adds up rows where Row type is Tax, or uses Total HMRC Receipts on its own, to avoid counting money twice
+- `hmrc_long`: one row per month per tax, with a **Row type** column (Tax, Component or Total). Totals and components are labelled because they already include other taxes, so the dashboard only adds up rows where Row type is Tax, or uses Total HMRC Receipts on its own, to avoid counting money twice.
 - `model_predictions`: 12 rows (actual and predicted receipts for the test months)
-- The two tables are deliberately not linked, because the predictions cover a different, shorter period
+- The two tables are deliberately not linked, because the predictions cover a different, shorter period.
 
 ### 🎨 Design choices
 - Every chart title says what it shows and the unit (£ million)
@@ -315,5 +315,5 @@ I came into this project as a former carer moving into data analytics, with no c
 ## 🙏 Credits and acknowledgements
 
 - **Data:** HMRC tax and NICs receipts, published on GOV.UK (link above)
-- **Repository structure and README style** were inspired by [predictive-employee-attrition-modelling](https://github.com/RNB1993/predictive-employee-attrition-modelling) by RNB1993
-- **AI assistance:** I used an AI assistant (Claude, by Anthropic) throughout this project. It guided me step by step and helped me write, explain and debug the Python code, draft the user stories for the project board, set up the Power BI dashboard, and write and edit this README. I ran every step on the data myself and checked the results against each other.
+- **README style/template** were inspired by [predictive-employee-attrition-modelling](https://github.com/RNB1993/predictive-employee-attrition-modelling) by RNB1993
+- **AI assistance:** I used an AI assistant (Claude, by Anthropic) throughout this project. It guided me step by step and helped me explain and debug the Python code, draft the user stories for the project board, set up the Power BI dashboard, and write and edit this README. I wrote and ran every step on the data myself and checked the results against each other.
