@@ -219,7 +219,7 @@ Each chart answers one business question. They are created in [02_eda.ipynb](not
 
 📓 [03_statistics.ipynb](notebooks/03_statistics.ipynb)
 
-The notebook explains mean, median, standard deviation, probability, hypothesis testing and correlation in plain words, and shows each one on the HMRC data. For example, total receipts average about £61.5bn a month with a standard deviation of about £16.7bn, and only 3.5% of months (4 out of 113, all of them Januaries) topped £100bn.
+The notebook explains _mean, median, standard deviation, probability, hypothesis testing and correlation in plain words_, and shows each one on the HMRC data. For example, total receipts average about £61.5bn a month with a standard deviation of about £16.7bn, and only 3.5% of months (4 out of 113, all of them Januaries) topped £100bn.
 
 ### 📅 Hypothesis 1: the January effect
 - **Null hypothesis (H0):** average receipts in January are the same as in other months
@@ -248,8 +248,8 @@ The notebook explains mean, median, standard deviation, probability, hypothesis 
 **Why this model:** it matches what the exploration and statistics found (a steady trend plus a proven seasonal pattern), it works well on a small dataset of 113 months, it can be explained to a finance team, and it can keep following a rising trend.
 
 **Alternatives considered:**
-- Random forest: handles uneven patterns but cannot predict above the highest value it has seen, and could memorise a small dataset
-- Time-series models such as SARIMA: designed for this kind of data, but harder to explain and beyond the chosen toolset
+- **Random forest**: handles uneven patterns but cannot predict above the highest value it has seen, and could memorise a small dataset
+- **_Time-series_** models such as **SARIMA**: designed for this kind of data, but harder to explain and beyond the chosen toolset
 - Neural networks: need far more data than 113 months
 
 **Testing:** trained on April 2017 to August 2025 (101 months), then tested on the last 12 months (September 2025 to August 2026), which the model had never seen. The split is by time, not random, so the model never peeks at the future.
@@ -268,7 +268,7 @@ The notebook explains mean, median, standard deviation, probability, hypothesis 
 
 ## 🎛️ Interactive dashboard
 
-📁 [`dashboards/hmrc_dashboard.pbix`](dashboards/hmrc_dashboard.pbix) (open with Power BI Desktop)
+📁 This link [`dashboards/hmrc_dashboard.pbix`](dashboards/hmrc_dashboard.pbix) can be opened with Power BI Desktop.
 
 The dashboard has two pages. Python prepares the data for it (notebook 04, Part 5), and Power BI turns it into an interactive report.
 
@@ -359,7 +359,7 @@ Ideas parked in the **Features** column of the board:
 ## 🪞 Learning reflection
 
 ### Where I started
-I am a former carer retraining as a data analyst, and I had less coding background before joining Code Institute's intensive data analytics bootcamp. The bootcamp training gave me the foundations in Python, pandas, statistics and Power BI. This project was the first time I took everything from an empty folder to a finished analysis, model and dashboard, and I learned the most from the things that went wrong as my first project was purely depended on ETL, EDA, creating connection between vs code and my github, presenting a peoper clear structured read me.
+I am a former Senior carer retraining as a data analyst, and I had less coding background before joining Code Institute's intensive data analytics bootcamp. The bootcamp training gave me the foundations in Python, pandas, statistics and Power BI. This project was the first time I took everything from an empty folder to a finished analysis, model and dashboard, and I learned the most from the things that went wrong as my first project was purely depended on ETL, EDA, creating connection between vs code and my github, presenting a peoper clear structured read me.
 
 ### Feedback from my first project and what I changed
 My first project's assessment gave me three clear targets, and I used this project to work on each one.
@@ -368,7 +368,7 @@ My first project's assessment gave me three clear targets, and I used this proje
 - **A more clearly defined use of AI.** This time I decided in advance how I would use an AI assistant and recorded it. It guided me step by step, helped me explain and debug code, and helped draft the user stories and README. I ran every step myself, checked the results against my own data (for example by comparing Power BI numbers with my Python results), and described exactly what the assistant did in the Credits section.
 - **More focus on the modelling.** I spent more time on the model's features and testing than I did before. The model uses a time counter for the trend and the month of the year for seasonality, which came directly from what my exploration and hypothesis tests found. I split the data by time and not randomly, compared the model with a simple baseline, and wrote down where it fails (it under-predicts January).
 
-### Challenges and how I overcame them
+### Challenges and how I overcame them:
 - **Learning new tools while delivering.** Git, Jupyter and Power BI were new to me. I broke the work into small user stories on a Kanban board, finished one at a time, and committed after each one, which stopped it feeling overwhelming
 - **Messy real-world data.** The HMRC file had a footer row, numbers stored as text and `[X]` markers. I learned to check what the data really looks like before trusting it, and to check every cleaning step
 - **Charts that would not show on GitHub.** My interactive Plotly charts were blank in the repo. I found out why (GitHub cannot run the JavaScript) and fixed it by saving each chart as a picture as well
@@ -384,7 +384,7 @@ My first project's assessment gave me three clear targets, and I used this proje
 - Next time I would start the Kanban board and the function library earlier, and try a second model such as a random forest, which is waiting in the Features column of my board
 
 
-**What I learned and how it prepares me for work as an analyst**
+**What I learned and how it prepares me for work as an analyst!**
 - How to structure a project: a plan, a clean data pipeline, analysis, a model, a dashboard and clear documentation
 - That the analysis and the stakeholder are connected: every chart answers a business question
 - To write reusable, commented code, to use version control with meaningful commits, and to be honest about limitations.
@@ -393,6 +393,7 @@ My first project's assessment gave me three clear targets, and I used this proje
 
 ## 🙏 Credits and acknowledgements
 
-- **Data:** HMRC tax and NICs receipts, published on GOV.UK (link above)
-- **README style/template** were inspired by [predictive-employee-attrition-modelling](https://github.com/RNB1993/predictive-employee-attrition-modelling) by RNB1993
-- **AI assistance:** I used an AI assistant (Claude, by Anthropic) throughout this project. It guided me step by step and helped me explain and debug the Python code, draft the user stories for the project board, set up the Power BI dashboard with buttons etc, and edit this README. I wrote and ran every step on the data myself and checked the results against each other. Thanks code institute and team of staff and students who supported me for this project.
+- **Data:** HMRC tax and NICs receipts, published on GOV.UK (link above) open source.
+- **AI assistance:** I used an AI assistant (Claude, by Anthropic) throughout this project. It guided me step by step and helped me explain and debug the Python code, draft the user stories for the project board, set up the Power BI dashboard with buttons etc, and edit this README. I wrote and ran every step on the data myself and checked the results against each other. 
+- **Special thanks**
+Thanks code institute and team of staff and students who supported me for this project.
