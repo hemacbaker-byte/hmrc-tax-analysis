@@ -362,7 +362,6 @@ Total receipts grew from about £593bn in 2017/18 to about £938bn in 2025/26. 2
 ## 🚀 Future features
 
 Ideas parked in the **Features** column of the board:
-- Trying a second model (a random forest) and compare it with the linear regression.
 - Prepare a short presentation of the findings.
 - Longer-term ideas: a live data feed, deep learning and a deployed web app.
 
@@ -392,8 +391,6 @@ My first project's assessment gave me three clear targets, and I used this proje
 - How to structure a whole project: a plan, a clean data pipeline, analysis, a model, a dashboard and clear documentation
 - That every chart and test should answer a question a stakeholder would actually ask
 - To write reusable, commented code, to use version control with specific commit messages, and to be honest about limitations
-- Next time I would start the Kanban board and the function library earlier, and try a second model such as a random forest, which is waiting in the Features column of my board
-
 
 **What I learned and how it prepares me for work as an analyst!**
 - How to structure a project: a plan, a clean data pipeline, analysis, a model, a dashboard and clear documentation
