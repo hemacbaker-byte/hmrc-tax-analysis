@@ -315,11 +315,6 @@ Total receipts grew from about £593bn in 2017/18 to about £938bn in 2025/26. 2
 - `model_predictions`: 12 rows (actual and predicted receipts for the test months)
 - The two tables are deliberately not linked, because the predictions cover a different, shorter period.
 
-### 🎨 Design choices
-- Every chart title says what it shows and the unit (£ million)
-- One filter, one font family and a consistent colour scheme keep the pages simple to use
-- The financial year chart leaves out 2026/27, because it only has five months so far and would look like a fall in receipts
-- Values are in £ million, so "7M" on a card means about £7 trillion across all 113 months
 
 ---
 
