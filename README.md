@@ -62,7 +62,7 @@ Work was planned and tracked on a GitHub Kanban board, with a user story for eve
 
 - **Must-have stories** cover the pass requirements: repo set-up, README, loading and cleaning the data, exploration, charts, statistics, hypotheses, the machine learning model, the dashboard, conclusions, reflection and commenting the code
 - **Should-have stories** added interactive filters, a predictions section and documentation of data limits
-- **Could-have and Won't-have ideas** were moved to a **Features** column on the board as future work (see "Future features" below)
+- **Could-have and Won't-have ideas** were moved to a **Features** column on the board as future work (see "Future features" below).
 
 ---
 
@@ -248,9 +248,9 @@ The notebook explains _mean, median, standard deviation, probability, hypothesis
 **Why this model:** it matches what the exploration and statistics found (a steady trend plus a proven seasonal pattern), it works well on a small dataset of 113 months, it can be explained to a finance team, and it can keep following a rising trend.
 
 **Alternatives considered:**
-- **Random forest**: handles uneven patterns but cannot predict above the highest value it has seen, and could memorise a small dataset
-- **_Time-series_** models such as **SARIMA**: designed for this kind of data, but harder to explain and beyond the chosen toolset
-- Neural networks: need far more data than 113 months
+- **Random forest**: handles uneven patterns but cannot predict above the highest value it has seen, and could memorise a small dataset.
+- **_Time-series_** models such as **SARIMA**: designed for this kind of data, but harder to explain and beyond the chosen toolset.
+- **Neural networks**: need far more data than 113 months
 
 **Testing:** trained on April 2017 to August 2025 (101 months), then tested on the last 12 months (September 2025 to August 2026), which the model had never seen. The split is by time, not random, so the model never peeks at the future.
 
@@ -262,7 +262,7 @@ The notebook explains _mean, median, standard deviation, probability, hypothesis
 **Weaknesses:**
 - It under-predicted in 9 of the 12 months, because receipts grew faster recently than the trend it learned
 - It struggles most with January: in January 2026 it predicted about £107.5bn against an actual £126.4bn (about 15% too low)
-- The Covid dip sits inside the training data and does not fit a straight trend neatly
+- The Covid dip sits inside the training data and does not fit a straight trend neatly.
 
 ---
 
