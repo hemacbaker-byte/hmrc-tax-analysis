@@ -205,7 +205,12 @@ The notebook explains mean, median, standard deviation, probability, hypothesis 
 
 ## 🎛️ Interactive dashboard
 
-📁 [`dashboards/hmrc_dashboard.pbix`](dashboards/hmrc_dashboard.pbix) (open with Power BI Desktop)
+📁 ## 📊 Interactive Power BI Dashboard
+
+![Dashboard Preview](docs/image_2f5f73.png)
+
+> 📁 **Power BI Report File**: 
+> Click here to [Download `hmrc_dashboard.pbix`](https://github.com/hemacbaker-byte/hmrc-tax-analysis/raw/main/dashboards/hmrc_dashboard.pbix) to view in Power BI Desktop.
 
 The dashboard has two pages. Python prepares the data for it (notebook 04, Part 5), and Power BI turns it into an interactive report.
 
