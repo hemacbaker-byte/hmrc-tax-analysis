@@ -50,7 +50,7 @@ The project followed a structured plan, one stage at a time:
 5. Test      → statistics and hypotheses (notebook 03)
 6. Predict   → machine learning model (notebook 04)
 7. Share     → interactive Power BI dashboard
-8. Conclude  → findings, recommendations and reflection
+8. Conclude  → findings, recommendations and reflection(notebook 05)
 ```
 ---
 
@@ -77,7 +77,7 @@ Work was planned and tracked on a GitHub Kanban board, with a user story for eve
   - 2.2 Justified methodology: "Why linear regression?" and "Alternatives considered" in notebook 04
 - **LO3 Real-world analysis**
   - 3.1 Appropriate methods: cleaning, exploration and hypothesis tests in notebooks 01 to 03
-  - 3.2 Effectiveness: "Evaluating the model" and the evaluation summary in notebook 04
+  - 3.2 Effectiveness: "Evaluating the model" and the evaluation summary in notebook 04, notebook 05 holds the conclusion.
   - 3.3 Structured plan: this README and the introduction and summary sections in each notebook
 - **LO4 Tools**
   - 4.1 Analytics tools: Python for the pipeline and Power BI for the dashboard (see "Interactive dashboard")
@@ -97,6 +97,7 @@ hmrc-tax-analysis/
 │   ├── 02_eda.ipynb               explore the data and chart it
 │   ├── 03_statistics.ipynb        statistics and hypothesis tests
 │   └── 04_machine_learning.ipynb  predict monthly receipts
+└─  └── 05_conclusion.ipynb  findings, recommendations and limitations
 ├── dashboards/       Power BI dashboard (.pbix)
 ├── docs/             banner and dashboard screenshots
 ├── outputs/          saved charts (pictures and interactive versions)
@@ -114,7 +115,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Then open the notebooks in VS Code (choose the `.venv` kernel) and run them in order, 01 to 04. Each notebook starts from the cleaned file saved by the one before it. Notebook 02 saves its Plotly charts as pictures using `kaleido`, which needs Google Chrome installed. To open the dashboard, use Power BI Desktop and open `dashboards/hmrc_dashboard.pbix`.
+Then open the notebooks in VS Code (choose the `.venv` kernel) and run them in order, 01 to 05. Each notebook starts from the cleaned file saved by the one before it. Notebook 02 saves its Plotly charts as pictures using `kaleido`, which needs Google Chrome installed. To open the dashboard, use Power BI Desktop and open `dashboards/hmrc_dashboard.pbix`.
 
 ---
 
