@@ -52,6 +52,7 @@ The project followed a structured plan, one stage at a time:
 7. Share     → interactive Power BI dashboard
 8. Conclude  → findings, recommendations and reflection
 ```
+---
 
 ### 🧱 Project management
 
@@ -62,7 +63,8 @@ Work was planned and tracked on a GitHub Kanban board, with a user story for eve
 - **Must-have stories** cover the pass requirements: repo set-up, README, loading and cleaning the data, exploration, charts, statistics, hypotheses, the machine learning model, the dashboard, conclusions, reflection and commenting the code
 - **Should-have stories** added interactive filters, a predictions section and documentation of data limits
 - **Could-have and Won't-have ideas** were moved to a **Features** column on the board as future work (see "Future features" below)
-- Most commit messages name the user story they belong to (for example `US9: ...`), and `closes #9` closes the matching card on the board
+
+---
 
 ### 📋 Where to find the evidence for each assessment criterion
 
