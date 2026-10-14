@@ -351,14 +351,14 @@ Ideas parked in the **Features** column of the board:
 ## 🪞 Learning reflection
 
 ### Where I started
-I am a former carer retraining as a data analyst, and I had less coding background before joining Code Institute's intensive data analytics bootcamp. The bootcamp training gave me the foundations in Python, pandas, statistics and Power BI. This project was the first time I took everything from an empty folder to a finished analysis, model and dashboard, and I learned the most from the things that went wrong as my first project was purely depended on 
+I am a former carer retraining as a data analyst, and I had less coding background before joining Code Institute's intensive data analytics bootcamp. The bootcamp training gave me the foundations in Python, pandas, statistics and Power BI. This project was the first time I took everything from an empty folder to a finished analysis, model and dashboard, and I learned the most from the things that went wrong as my first project was purely depended on ETL, EDA, creating connection between vs code and my github, presenting a peoper clear structured read me.
 
 ### Feedback from my first project and what I changed
 My first project's assessment gave me three clear targets, and I used this project to work on each one.
 
 - **Code modularity.** I was told my code needed to be more reusable. In this project the exploration, statistics and machine learning notebooks each start with a cell of small functions with docstrings and comments (for example `load_clean_data`, `seasonal_index`, `financial_year`, `january_test`, `correlation_test`, `make_features`, `split_by_time`, `train_model` and `evaluate_predictions`). Each later cell calls them, and the markdown under the cell notes which function was used. I kept the ETL notebook step by step on purpose, so every cleaning fix is easy to follow
-- **A more clearly defined use of AI.** This time I decided in advance how I would use an AI assistant and recorded it. It guided me step by step, helped me write, explain and debug code, and helped draft the user stories and README. I ran every step myself, checked the results against my own data (for example by comparing Power BI numbers with my Python results), and described exactly what the assistant did in the Credits section
-- **More focus on the modelling.** I spent more time on the model's features and testing than I did before. The model uses a time counter for the trend and the month of the year for seasonality, which came directly from what my exploration and hypothesis tests found. I split the data by time and not randomly, compared the model with a simple baseline, and wrote down where it fails (it under-predicts January)
+- **A more clearly defined use of AI.** This time I decided in advance how I would use an AI assistant and recorded it. It guided me step by step, helped me explain and debug code, and helped draft the user stories and README. I ran every step myself, checked the results against my own data (for example by comparing Power BI numbers with my Python results), and described exactly what the assistant did in the Credits section.
+- **More focus on the modelling.** I spent more time on the model's features and testing than I did before. The model uses a time counter for the trend and the month of the year for seasonality, which came directly from what my exploration and hypothesis tests found. I split the data by time and not randomly, compared the model with a simple baseline, and wrote down where it fails (it under-predicts January).
 
 ### Challenges and how I overcame them
 - **Learning new tools while delivering.** Git, Jupyter and Power BI were new to me. I broke the work into small user stories on a Kanban board, finished one at a time, and committed after each one, which stopped it feeling overwhelming
@@ -367,7 +367,7 @@ My first project's assessment gave me three clear targets, and I used this proje
 - **Power BI results that looked wrong.** My slicers were filtering backwards and one chart showed a flat line because it used the wrong Month column. I fixed them by working out what the numbers should be and comparing them with my Python results, which showed me why a dashboard must be validated against the analysis
 - **Double counting.** Some columns already include others (totals and components). I labelled them so the dashboard could not add the same money twice
 - **Testing my own findings.** I checked each hypothesis a second way, for example by removing the trend, and found the Income Tax and National Insurance link was weaker than the first number suggested
-- **Keeping going.** At one point I was worn out by the amount of code. Taking a break and moving on to the more visual Power BI work helped me finish
+- **Keeping going.** At one point I was worn out by the amount of code. Taking a break and moving on to the more visual Power BI work helped me finish it.
 
 ### What I learned and what I would do next
 - How to structure a whole project: a plan, a clean data pipeline, analysis, a model, a dashboard and clear documentation
@@ -387,4 +387,4 @@ My first project's assessment gave me three clear targets, and I used this proje
 
 - **Data:** HMRC tax and NICs receipts, published on GOV.UK (link above)
 - **README style/template** were inspired by [predictive-employee-attrition-modelling](https://github.com/RNB1993/predictive-employee-attrition-modelling) by RNB1993
-- **AI assistance:** I used an AI assistant (Claude, by Anthropic) throughout this project. It guided me step by step and helped me explain and debug the Python code, draft the user stories for the project board, set up the Power BI dashboard, and write and edit this README. I wrote and ran every step on the data myself and checked the results against each other.
+- **AI assistance:** I used an AI assistant (Claude, by Anthropic) throughout this project. It guided me step by step and helped me explain and debug the Python code, draft the user stories for the project board, set up the Power BI dashboard with buttons etc, and edit this README. I wrote and ran every step on the data myself and checked the results against each other. Thanks code institute and team of staff and students who supported me for this project.
